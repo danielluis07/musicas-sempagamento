@@ -58,7 +58,7 @@ const AuthModal = () => {
               email_input_placeholder: "Email",
               password_label: "Digite sua Senha",
               password_input_placeholder: "Senha",
-              button_label: "Registrar",
+              button_label: "Entrar",
               loading_button_label: "Registrando...",
               social_provider_text: "Entrar com {{provider}}",
               link_text: "Já possui uma conta? Entre",
@@ -97,7 +97,7 @@ const AuthModal = () => {
             default: {
               colors: {
                 brand: "#404040",
-                brandAccent: "#22c55e",
+                brandAccent: "#F40D0D",
               },
             },
           },
