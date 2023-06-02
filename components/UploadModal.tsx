@@ -96,11 +96,11 @@ const UploadModal = () => {
 
       router.refresh();
       setIsLoading(false);
-      toast.success("Song created!");
+      toast.success("Música criada!");
       reset();
       uploadModal.onClose();
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Algo deu errado!");
     } finally {
       setIsLoading(false);
     }
@@ -108,8 +108,8 @@ const UploadModal = () => {
 
   return (
     <Modal
-      title="Add a song"
-      description="Upload an mp3 file"
+      title="Adicionar música"
+      description="Faça o upload de um arquivo mp3"
       isOpen={uploadModal.isOpen}
       onChange={onChange}>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-4">
@@ -117,18 +117,18 @@ const UploadModal = () => {
           id="title"
           disabled={isLoading}
           {...register("title", { required: true })}
-          placeholder="Song title"
+          placeholder="Nome da música"
         />
         <Input
           id="author"
           disabled={isLoading}
           {...register("author", { required: true })}
-          placeholder="Song author"
+          placeholder="Artistar"
         />
         <div>
           <div className="pb-1">Selecione uma música</div>
           <Input
-            placeholder="test"
+            placeholder="música"
             disabled={isLoading}
             type="file"
             accept=".mp3"
@@ -139,7 +139,7 @@ const UploadModal = () => {
         <div>
           <div className="pb-1">Selecione uma imagem</div>
           <Input
-            placeholder="test"
+            placeholder="imagem"
             disabled={isLoading}
             type="file"
             accept="image/*"
